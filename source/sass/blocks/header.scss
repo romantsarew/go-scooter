@@ -1,0 +1,44 @@
+.header {
+  position: absolute;
+  padding-top: 125px;
+  width: 100%;
+  z-index: 2;
+}
+
+.header__container {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.header__logo {
+  display: flex;
+  height: fit-content;
+  width: fit-content;
+
+  &:hover svg,
+  &:focus svg {
+    color: #ffde40;
+  }
+
+  &:active svg {
+    color: #ff0000;
+  }
+}
+
+@media (max-width: $vp-768) {
+  .header {
+    padding-top: 32px;
+  }
+
+  .header__container {
+    max-width: 100%;
+    padding: 0 17px;
+  }
+
+  .header__logo {
+    & svg {
+      width: 113px;
+      height: 32px;
+    }
+  }
+}

@@ -1,0 +1,247 @@
+.events {
+  overflow: hidden;
+}
+
+.events__container {
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  padding: 57px 0 0;
+  flex-direction: column;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("../img/drop.webp");
+    transform: rotate(135.26deg);
+    background-size: cover;
+    width: 350px;
+    height: 250px;
+    z-index: 5;
+    top: 65px;
+    right: -140px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/cup.webp");
+    width: 397px;
+    height: 495px;
+    z-index: 5;
+    bottom: 35px;
+    right: -25px;
+  }
+
+  & h2 {
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: 900;
+    max-width: 827px;
+    margin-bottom: 90px;
+    letter-spacing: -0.96px;
+    padding: 0 30px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      background-image: url("../img/point.webp");
+      transform: rotate(-15deg);
+      width: 320px;
+      height: 320px;
+      z-index: 5;
+      top: 380px;
+      left: -240px;
+    }
+  }
+
+  & p {
+    position: absolute;
+    top: 188px;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 500;
+    max-width: 51%;
+    padding: 0 30px;
+  }
+}
+
+.swiper-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 35px;
+  row-gap: 20px;
+}
+
+.swiper-slide {
+  min-width: 140px;
+  max-width: 100%;
+  min-height: 140px;
+}
+
+.swiper-slide img {
+  width: 100%;
+  min-height: 140px;
+  max-width: 456px;
+  border-radius: 64px;
+  transform: rotate(2deg);
+  background: #dedede;
+  object-fit: cover;
+}
+
+.swiper-slide--jazz {
+  padding-top: 220px;
+}
+
+.swiper-slide--girl {
+  margin-top: -220px;
+}
+
+.swiper__buttons {
+  display: none;
+}
+
+@media (max-width: $vp-768) {
+  .events__container {
+    max-width: 100%;
+    margin: 0;
+    padding: 69px 0 36px;
+    overflow: hidden;
+
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      display: none;
+    }
+
+    & h2 {
+      position: relative;
+      font-size: 32px;
+      line-height: 32px;
+      max-width: 100%;
+      margin-bottom: 22px;
+      padding: 0 17px;
+      letter-spacing: -0.64px;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    & p {
+      position: static;
+      font-size: 16px;
+      line-height: 19px;
+      max-width: 100%;
+      margin-bottom: 0;
+      padding: 0 17px;
+    }
+  }
+
+  .swiper {
+    width: 100%;
+
+    &::before {
+      position: absolute;
+      content: "";
+      background-image: url("../img/drop.webp");
+      transform: rotate(135.26deg);
+      background-size: cover;
+      width: 200px;
+      height: 100px;
+      z-index: 5;
+      top: -25px;
+      right: -65px;
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/drop@2x.webp");
+      }
+    }
+  }
+
+  .swiper-wrapper {
+    display: flex;
+    margin-bottom: 24px;
+    padding-top: 45px;
+  }
+
+  .swiper .swiper-slide {
+    max-width: 100%;
+  }
+
+  .swiper-slide img {
+    object-fit: cover;
+    min-width: 343px;
+    min-height: 343px;
+    max-width: 100%;
+    border-radius: 48px;
+    transform: rotate(0);
+    width: 100%;
+  }
+
+  .swiper-slide--jazz {
+    padding-top: 0;
+    order: 1;
+  }
+
+  .swiper-slide--party {
+    order: 2;
+  }
+
+  .swiper-slide--bag {
+    order: 4;
+  }
+
+  .swiper-slide--girl {
+    margin-top: 0;
+    order: 3;
+  }
+
+  .swiper__buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .swiper__button {
+    border: none;
+    background-color: #ffde40;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:not(:disabled):hover,
+    &:not(:disabled):focus {
+      background-color: $color-default-black;
+    }
+
+    &:not(:disabled):hover svg,
+    &:not(:disabled):focus svg {
+      color: #ffde40;
+    }
+
+    &:not(:disabled):active {
+      background-color: #ff0000;
+    }
+
+    &:not(:disabled):active svg {
+      color: $color-default-black;
+    }
+
+    &:disabled {
+      opacity: 50%;
+      cursor: default;
+    }
+  }
+
+  .swiper__button--prev {
+    transform: rotate(180deg);
+  }
+}

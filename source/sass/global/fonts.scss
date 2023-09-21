@@ -1,8 +1,23 @@
 @font-face {
   font-style: normal;
   font-weight: 400;
-  font-family: "";
-
+  font-family: "YS Text";
   font-display: swap;
-  src: url("../fonts/.woff2") format("woff2");
+  src: url("../fonts/text-regular.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "YS Text";
+  font-display: swap;
+  src: url("../fonts/text-medium.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 900;
+  font-family: "YS Text";
+  font-display: swap;
+  src: url("../fonts/text-black.woff") format("woff");
 }

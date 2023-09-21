@@ -1,0 +1,207 @@
+.subscription {
+  overflow: hidden;
+}
+
+.subscription__container {
+  max-width: 920px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 108px 0 128px;
+}
+
+.subscription__buy {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 420px;
+  gap: 35px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/subscrip-scooter.webp");
+    background-size: cover;
+    width: 873px;
+    height: 743px;
+    top: -235px;
+    right: -760px;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/subscrip-scooter@2x.webp");
+    }
+  }
+
+  & h2 {
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -0.96px;
+  }
+
+  & p {
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 500;
+    margin-bottom: 115px;
+  }
+}
+
+.subscription__discount {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 445px;
+  gap: 35px;
+  margin-left: auto;
+  margin-bottom: 111px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    border-radius: 412.78px;
+    opacity: 0.29;
+    background: #8241ef;
+    filter: blur(100px);
+    width: 412.78px;
+    height: 369.04px;
+    transform: rotate(-140.03deg);
+    top: 65px;
+    left: -550px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/subscr-community.webp");
+    background-size: cover;
+    width: 540px;
+    height: 532px;
+    top: -65px;
+    left: -595px;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/subscr-community@2x.webp");
+    }
+  }
+
+  & h3 {
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -0.96px;
+  }
+
+  & p {
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 500;
+    margin-bottom: 7px;
+  }
+}
+
+.subscription__button {
+  width: 281px;
+  font-size: 24px;
+  line-height: 22px;
+}
+
+.subscription__terms {
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #c5c5c5;
+
+  & a {
+    text-decoration: underline;
+    color: #c5c5c5;
+
+    &:hover,
+    &:focus {
+      color: #ffde40;
+    }
+
+    &:active {
+      color: #ff0000;
+    }
+  }
+}
+
+@media (max-width: $vp-768) {
+  .subscription__container {
+    max-width: 99%;
+    margin: 0;
+    padding: 30px 17px 72px;
+  }
+
+  .subscription__buy {
+    position: relative;
+    max-width: 100%;
+    gap: 23px;
+
+    &::after {
+      display: none;
+    }
+
+    & h2 {
+      font-size: 32px;
+      line-height: 32px;
+      letter-spacing: -0.64px;
+    }
+
+    & p {
+      font-size: 16px;
+      line-height: 19px;
+      margin-bottom: 0;
+    }
+  }
+
+  .subscription__discount {
+    max-width: 100%;
+    gap: 23px;
+    margin-left: 0;
+    margin-bottom: 72px;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      background-image: url("../img/subscr-community-mobile.webp");
+      background-size: cover;
+      width: 375.49px;
+      height: 374.33px;
+      top: 0;
+      left: -33px;
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/subscr-community-mobile@2x.webp");
+      }
+    }
+
+    & h3 {
+      font-size: 32px;
+      line-height: 32px;
+      letter-spacing: -0.72px;
+      padding-top: 368px;
+    }
+
+    & p {
+      font-size: 16px;
+      line-height: 19px;
+      margin-bottom: 5px;
+    }
+  }
+
+  .subscription__button {
+    width: 100%;
+    font-size: 18px;
+    line-height: 22px;
+    min-height: 49px;
+  }
+
+  .subscription__terms {
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
